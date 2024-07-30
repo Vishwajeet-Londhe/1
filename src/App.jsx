@@ -1,8 +1,17 @@
 import React from "react";
+import Navbar from "./components/Navbar";
+import Hero from "./components/Hero";
+import Secondpage from "./components/Secondpage";
 
 function App(){
   return(
-    <h1>ok meri maaa</h1>
+    <div>
+      <Navbar/>
+      <Hero/>
+      <Secondpage/>
+      
+    </div>
+    
   )
 }
 
