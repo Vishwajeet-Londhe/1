@@ -1,17 +1,11 @@
 import React from "react";
-import Navbar from "./components/Navbar";
-import Hero from "./components/Hero";
-import Secondpage from "./components/Secondpage";
+import Card from "./components/Card";
 
 function App(){
   return(
     <div>
-      <Navbar/>
-      <Hero/>
-      <Secondpage/>
-      
+     <Card/>
     </div>
-    
   )
 }
 
