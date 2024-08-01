@@ -7,18 +7,21 @@ function Card() {
         "https://images.unsplash.com/photo-1592578629295-73a151d69c96?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       name: "Amazon Basic",
       description: "hello i am amazon",
+      instock:true,
     },
     {
       image:
         "https://images.unsplash.com/photo-1483721310020-03333e577078?q=80&w=1856&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       name: "daily exercise",
       description: "this is daily exercise",
+      instock:false,
     },
     {
       image:
         "https://plus.unsplash.com/premium_photo-1689596509894-f9dbcd4f5de9?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       name: "fruits",
       description: "this is fruits",
+      instock:false,
     },
   ];
 
@@ -36,7 +39,9 @@ function Card() {
           <div className="w-full px-3 py-4">
             <h2 className="font-semibold">{elem.name}</h2>
             <p className="text-xs mt-3">{elem.description}</p>
-            <button className="px-4 py-1 bg-sky-400 text-md rounded-full text-zinc-100">Know more</button>
+            <button className={`px-4 py-1 ${elem.instock ? 'bg-sky-600': 'bg-red-600'} text-xs rounded mt-10 text-zinc-100`}>
+              {elem.instock ? "instock": "out of stock"}
+            </button>
           </div>
         </div>
       ))}
